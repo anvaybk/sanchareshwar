@@ -1,0 +1,235 @@
+/* styles.css */
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    user-select: none;
+    -webkit-user-select: none;
+   
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+	background-color: brown; /* Old maroon */
+	/* background-color: #fff; */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	height: 100%;
+}
+
+.container-heading {
+    max-width: auto;
+    margin: 1px auto;
+    background-color: #76552b; /* Old maroon */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	/* height: auto; */
+	/* max-height: fit-content; */
+	max-height: fit-content; 
+	
+	
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+	
+}
+
+center {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 90%; /* or any other percentage */
+}
+
+button {
+	display: block; 
+	background-color: brown; 
+	color: white; 
+	width: 100%; 
+	height: 50px; 
+	font-size: 24px; 
+	border-radius: 40px; 
+	border: none; 
+        text-align: center;
+	font-weight: bold;
+
+button:hover {
+    background-color: #e19510;
+}
+
+h1 {
+    font-size: 28px;
+    text-align: center;
+	width: 100%;
+	font-weight: bold;
+	background-color: #76552b; /* Old maroon */
+	color: white; 
+	
+}
+
+.chapter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+	background-color: bisque;
+	padding: 20px;
+
+}
+
+.chapter-content {
+    max-width: 100%;
+    overflow-y: auto;
+	max-height: 1050px; 
+    /* max-height: fit-content;	*/		/* 600px;  Adjust as needed */ 
+	background-color: bisque; 
+	font-size: 24px;
+	text-align: center;
+	font-weight: bold;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+@media print {
+  body {
+    display: none;
+  }
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.container-home {
+    max-width: 600px;
+    margin: 10px auto;
+    background-color: brown; /* Old maroon */
+	/* background-color: #fff; */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+/* Social Media */
+
+.social-icons {
+	display: flex;
+	justify-content: center;
+	gap: 15px;     //20px;
+	list-style: none;
+	padding: 0;
+}
+
+.social-icons li {
+	display: inline-block;
+}
+
+.social-icons a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.social-icons img {
+	width: 35px;  //40px
+	height: 35px;
+}
+
+/* Annual Event */
+
+.chapter-table {
+	max-width: 100%;
+	overflow-y: auto;
+	max-height: 750px;
+	background-color: bisque;
+	font-size: 22px;
+	text-align: center;
+	font-weight: bold;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border: 1px solid bisque;
+	font-weight: bold;
+}
+
+th,
+td {
+	text-align: left;
+	padding: 8px;
+	border: 1px solid orange;
+	/* #ddd */
+}
+
+th {
+	text-align: left;
+	padding: 8px;
+	border: 1px solid orange;
+	background-color: orange;
+	/* tr:nth-child(even){background-color: #orange} */
+	/* tr:hover {background-color: coral;} */
+
+
+/* Photo Gallery */
+
+.gallery{
+    display: inline-block;
+    border: 1px solid hsl(0, 0%, 60%);
+    margin: 5px;
+    width: 340px;
+}
+.gallery .description{
+    padding: 10px;
+    text-align: center;
+}
+.gallery:hover{
+    border: 1px solid hsl(0, 0%, 20%);
+}
+.gallery img{
+    width: 100%;
+    height: auto;
+}
+
+/* Video Gallery */
+.video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px; /* Space between videos */
+  }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+  }
