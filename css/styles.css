@@ -30,11 +30,13 @@ body {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* height: auto; */
-    /* max-height: fit-content; */
-    max-height: fit-content; 
-    color: white;
-    text-align: center;	
+	/* height: auto; */
+	/* max-height: fit-content; */
+	/* max-height: fit-content; */
+	/* color: white; */
+	text-align: center;	
+	
+	
 }
 
 img {
@@ -62,12 +64,38 @@ button {
         text-align: center;
 	font-weight: bold;
 
+/**
+    padding: 10px 20px;
+    font-size: 26px;
+    background-color: #007bff;  /* #722F37; green; #e19510; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+	border-width: 80%;
+	width: width:200px;
+	height: 50px;
+	display: block;
+	white-space: normal;
+ 
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  cursor: pointer;
+  display: table-cell;  
+ /* vertical-align: middle; margin: 4px 2px; */
+}
+
 button:hover {
     background-color: #e19510;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
 	width: 100%;
 	font-weight: bold;
@@ -90,7 +118,7 @@ h1 {
     max-width: 100%;
     overflow-y: auto;
 	max-height: 1050px; 
-    /* max-height: fit-content;	*/		/* 600px;  Adjust as needed */ 
+    /* max-height: fit-content;	*/		/* 600px;  Adjust as needed  work on this point*/ 
 	background-color: bisque; 
 	font-size: 24px;
 	text-align: center;
