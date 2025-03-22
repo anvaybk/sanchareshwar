@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #ead0a8; /* Maroon color #800000 */
+    background-color: #6b3e26; /* Maroon color #800000 #ead0a8 */
     color: white;
     padding: 15px 0;
     text-align: center;
@@ -66,7 +66,7 @@ main .content {
 }
 
 footer {
-    background-color: #76552b; /* Old brown #76552b maroon */
+    background-color: #6b3e26; /* Old brown #76552b maroon */
     color: white;  
     padding: 20px 0;
     text-align: center;
