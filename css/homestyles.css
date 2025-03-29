@@ -45,8 +45,8 @@ nav.menu .menu-item {
 }
 
 nav.menu .menu-item img {
-    width: 150px;     /* auto 60px */
-    height: 120px;     /* auto 60px */
+    width: 60px;     /* auto 60px 150px */
+    height: 60px;     /* auto 60px 120px */
 }
 
 nav.menu .menu-item span {
