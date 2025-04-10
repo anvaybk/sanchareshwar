@@ -35,6 +35,92 @@ function goToNityaPathHome() {
      window.location.href = '../nityapathhome.html';
 }
 
+// Chapter Next Previous link 10042025
+function goToChapterPage1() {
+     window.location.href = 'chapter1.html';
+}
+function goToChapterPage2() {
+     window.location.href = 'chapter2.html';
+}
+function goToChapterPage3() {
+     window.location.href = 'chapter3.html';
+}
+function goToChapterPage4() {
+     window.location.href = 'chapter4.html';
+}
+function goToChapterPage5() {
+     window.location.href = 'chapter5.html';
+}
+function goToChapterPage6() {
+     window.location.href = 'chapter6.html';
+}
+function goToChapterPage7() {
+     window.location.href = 'chapter7.html';
+}
+function goToChapterPage8() {
+     window.location.href = 'chapter8.html';
+}
+function goToChapterPage9() {
+     window.location.href = 'chapter9.html';
+}
+function goToChapterPage10() {
+     window.location.href = 'chapter10.html';
+}
+function goToChapterPage11() {
+     window.location.href = 'chapter11.html';
+}
+function goToChapterPage12() {
+     window.location.href = 'chapter12.html';
+}
+function goToChapterPage13() {
+     window.location.href = 'chapter13.html';
+}
+function goToChapterPage14() {
+     window.location.href = 'chapter14.html';
+}
+function goToChapterPage15() {
+     window.location.href = 'chapter15.html';
+}
+function goToChapterPage16() {
+     window.location.href = 'chapter16.html';
+}
+function goToChapterPage17() {
+     window.location.href = 'chapter17.html';
+}
+function goToChapterPage18() {
+     window.location.href = 'chapter18.html';
+}
+function goToChapterPage19() {
+     window.location.href = 'chapter19.html';
+}
+function goToChapterPage20() {
+     window.location.href = 'chapter20.html';
+}
+function goToChapterPage21() {
+     window.location.href = 'chapter21.html';
+}
+function goToChapterPage22() {
+     window.location.href = 'chapter22.html';
+}
+function goToChapterPage23() {
+     window.location.href = 'chapter23.html';
+}
+function goToChapterPage24() {
+     window.location.href = 'chapter24.html';
+}
+function goToChapterPage25() {
+     window.location.href = 'chapter25.html';
+}
+function goToChapterPage26() {
+     window.location.href = 'chapter26.html';
+}
+function goToChapterPage27() {
+     window.location.href = 'chapter27.html';
+}
+function goToChapterPage28() {
+     window.location.href = 'chapter28.html';
+}
+
 // JavaScript to disable right-click context menu globally and on a specific section
 document.addEventListener('DOMContentLoaded', function() {
     // Disable right-click context menu globally
