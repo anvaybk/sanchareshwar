@@ -117,7 +117,7 @@ h1 {
 .chapter-content {
     max-width: 100%;
     overflow-y: auto;
-	max-height: 1050px; 
+	max-height: -webkit-fill-available;   /* Old Value 1050px */
     /* max-height: fit-content;	*/		/* 600px;  Adjust as needed  work on this point*/ 
 	background-color: bisque; 
 	font-size: 24px;
