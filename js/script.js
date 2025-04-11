@@ -121,6 +121,26 @@ function goToChapterPage28() {
      window.location.href = 'chapter28.html';
 }
 
+// Chapter Next Previous link for Panchapadi 11042025
+function goToPanchapadiPage1() {
+     window.location.href = 'panchapadi1.html';
+}
+function goToPanchapadiPage2() {
+     window.location.href = 'panchapadi2.html';
+}
+function goToPanchapadiPage3() {
+     window.location.href = 'panchapadi3.html';
+}
+function goToPanchapadiPage4() {
+     window.location.href = 'panchapadi4.html';
+}
+function goToPanchapadiPage5() {
+     window.location.href = 'panchapadi5.html';
+}
+function goToPanchapadiPage6() {
+     window.location.href = 'panchapadi6.html';
+}
+
 // JavaScript to disable right-click context menu globally and on a specific section
 document.addEventListener('DOMContentLoaded', function() {
     // Disable right-click context menu globally
