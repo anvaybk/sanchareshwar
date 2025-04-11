@@ -122,6 +122,9 @@ function goToChapterPage28() {
 }
 
 // Chapter Next Previous link for Panchapadi 11042025
+function goToPanchapadiHome() {
+     window.location.href = '../panchapadi.html';
+}
 function goToPanchapadiPage1() {
      window.location.href = 'panchapadi1.html';
 }
