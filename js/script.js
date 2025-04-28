@@ -144,6 +144,29 @@ function goToPanchapadiPage6() {
      window.location.href = 'panchapadi6.html';
 }
 
+// Chapter Next Previous link for Datta Path 28042025
+function goToDattaPathHome() {
+     window.location.href = '../dattapath.html';
+}
+function goToDattaPathPage1() {
+     window.location.href = 'dattapath1.html';
+}
+function goToDattaPathPage2() {
+     window.location.href = 'dattapath2.html';
+}
+function goToDattaPathPage3() {
+     window.location.href = 'dattapath3.html';
+}
+function goToDattaPathPage4() {
+     window.location.href = 'dattapath4.html';
+}
+function goToDattaPathPage5() {
+     window.location.href = 'dattapath5.html';
+}
+function goToDattaPathPage6() {
+     window.location.href = 'dattapath6.html';
+}
+
 // JavaScript to disable right-click context menu globally and on a specific section
 document.addEventListener('DOMContentLoaded', function() {
     // Disable right-click context menu globally
