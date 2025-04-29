@@ -4,7 +4,7 @@
   "short_name": "Sanchareshwar",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#a52a2a",
+  "background_color": "#6b3e26",
   "orientation": "any",
   "scope": "/",
   "description": "श्री संचारेश्वर चरित्रामृत, बावणी, श्री दत्तपाठ, पंचपदी व सामुदायिक उपासना यांचे माध्यमातून अध्यात्मिक जीवनाचा शोध घ्या.  Explore the spiritual journey of Shri Sanchareshwar Charitramrut, Bawani, DattaPath, Panchpadi, and community worship resources. Discover devotion and divine wisdom.",
@@ -160,7 +160,7 @@
   ],
   "screenshots": [
     {
-      "src": "images/icon-1280x720.png",
+      "src": "images/screenshot-1280x720.png",
       "type": "image/png",
       "sizes": "1280x720",
       "platform": "wide"
