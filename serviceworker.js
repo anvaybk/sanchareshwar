@@ -116,6 +116,7 @@ const INITIAL_CACHED_RESOURCES = [
 	"/audios/Sanchareshwar-Panchapadi-Pad-3.mp3",
 	"/audios/Sanchareshwar-Panchapadi-Pad-4.mp3",
 	"/audios/Sanchareshwar-Panchapadi-Pad-5.mp3",
+	"/audios/Sanchareshwar-Tumhich-Na.mp3",
 	"/audios/Sanchareshwar-Bavani.mp3"
 ];
 // Cached resources that match the following strings should not be periodically updated.
