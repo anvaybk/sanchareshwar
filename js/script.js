@@ -167,6 +167,38 @@ function goToDattaPathPage6() {
      window.location.href = 'dattapath6.html';
 }
 
+// Chapter Next Previous link for Ashtotarshat Namavali 03052025
+function goToAshtotarNamavaliHome() {
+     window.location.href = '../ashtotarnamavali.html';
+}
+function goToAshtotarNamavaliHome1() {
+     window.location.href = 'ashtotarnamavali1.html';
+}
+function goToAshtotarNamavaliHome2() {
+     window.location.href = 'ashtotarnamavali2.html';
+}
+function goToAshtotarNamavaliHome3() {
+     window.location.href = 'ashtotarnamavali3.html';
+}
+function goToAshtotarNamavaliHome4() {
+     window.location.href = 'ashtotarnamavali4.html';
+}
+function goToAshtotarNamavaliHome5() {
+     window.location.href = 'ashtotarnamavali5.html';
+}
+function goToAshtotarNamavaliHome6() {
+     window.location.href = 'ashtotarnamavali6.html';
+}
+function goToAshtotarNamavaliHome7() {
+     window.location.href = 'ashtotarnamavali7.html';
+}
+function goToAshtotarNamavaliHome8() {
+     window.location.href = 'ashtotarnamavali8.html';
+}
+function goToAshtotarNamavaliHome9() {
+     window.location.href = 'ashtotarnamavali9.html';
+}
+
 // JavaScript to disable right-click context menu globally and on a specific section
 document.addEventListener('DOMContentLoaded', function() {
     // Disable right-click context menu globally
