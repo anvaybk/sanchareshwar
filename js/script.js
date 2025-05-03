@@ -171,31 +171,31 @@ function goToDattaPathPage6() {
 function goToAshtotarNamavaliHome() {
      window.location.href = '../ashtotarnamavali.html';
 }
-function goToAshtotarNamavaliHome1() {
+function goToAshtotarNamavaliPage1() {
      window.location.href = 'ashtotarnamavali1.html';
 }
-function goToAshtotarNamavaliHome2() {
+function goToAshtotarNamavaliPage2() {
      window.location.href = 'ashtotarnamavali2.html';
 }
-function goToAshtotarNamavaliHome3() {
+function goToAshtotarNamavaliPage3() {
      window.location.href = 'ashtotarnamavali3.html';
 }
-function goToAshtotarNamavaliHome4() {
+function goToAshtotarNamavaliPage4() {
      window.location.href = 'ashtotarnamavali4.html';
 }
-function goToAshtotarNamavaliHome5() {
+function goToAshtotarNamavaliPage5() {
      window.location.href = 'ashtotarnamavali5.html';
 }
-function goToAshtotarNamavaliHome6() {
+function goToAshtotarNamavaliPage6() {
      window.location.href = 'ashtotarnamavali6.html';
 }
-function goToAshtotarNamavaliHome7() {
+function goToAshtotarNamavaliPage7() {
      window.location.href = 'ashtotarnamavali7.html';
 }
-function goToAshtotarNamavaliHome8() {
+function goToAshtotarNamavaliPage8() {
      window.location.href = 'ashtotarnamavali8.html';
 }
-function goToAshtotarNamavaliHome9() {
+function goToAshtotarNamavaliPage9() {
      window.location.href = 'ashtotarnamavali9.html';
 }
 
