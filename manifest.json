@@ -1,13 +1,13 @@
 {
   "name": "Sanchareshwar Charitramrut",
   "id": "/sanchareshwar/",
-  "short_name": "श्री संचारेश्वर चरित्रामृत",
+  "short_name": "संचारेश्वर चरित्रामृत",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fffaf0",
   "orientation": "any",
   "scope": "/",
-  "description": "श्री संचारेश्वर चरित्रामृत, बावणी, श्री दत्तपाठ, पंचपदी व सामुदायिक उपासना यांचे माध्यमातून अध्यात्मिक जीवनाचा शोध घ्या.  Explore the spiritual journey of Shri Sanchareshwar Charitramrut, Bawani, DattaPath, Panchpadi, and community worship resources. Discover devotion and divine wisdom.",
+  "description": "श्री संचारेश्वर चरित्रामृत, बावणी, श्री दत्तपाठ, अष्टोत्तरशत् नामावली, पंचपदी व सामुदायिक उपासना यांचे माध्यमातून अध्यात्मिक जीवनाचा शोध घ्या.  Explore the spiritual journey of Shri Sanchareshwar Charitramrut, Bawani, DattaPath, Panchpadi, and community worship resources. Discover devotion and divine wisdom.",
   "version": "1.0.0.0",
   "theme_color": "#000000",
    "developer": {
