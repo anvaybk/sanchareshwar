@@ -97,7 +97,7 @@ footer {
 
 /* Responsive Styles */
 
-/* For screens wider than 950px, show 4 menu items */
+/* For screens wider than 950px, show 4 menu items 
 @media screen and (min-width: 914px) {
     nav.menu {
         display: flex;
@@ -108,7 +108,7 @@ footer {
         flex: 1 1 calc(20% - 40px); /* Each item takes 25% of the width minus 40px */
         max-width: calc(20% - 40px); /* Ensure max-width is maintained */
     }
-}
+} */
 
 @media screen and (max-width: 768px) {
     nav.menu .menu-item {
