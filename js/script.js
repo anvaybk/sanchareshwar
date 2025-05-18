@@ -199,6 +199,65 @@ function goToAshtotarNamavaliPage9() {
      window.location.href = 'ashtotarnamavali9.html';
 }
 
+// Chapter Next Previous link for Sanchareshwar Geeta 18052025
+function goToSanchareshwarGeetaHome() {
+     window.location.href = '../sanchareshwargeeta.html';
+}
+function goToSgeetaPage01() {
+     window.location.href = 'sgeeta1.html';
+}
+function goToSgeetaPage02() {
+     window.location.href = 'sgeeta2.html';
+}
+function goToSgeetaPage03() {
+     window.location.href = 'sgeeta3.html';
+}
+function goToSgeetaPage04() {
+     window.location.href = 'sgeeta4.html';
+}
+function goToSgeetaPage05() {
+     window.location.href = 'sgeeta5.html';
+}
+function goToSgeetaPage06() {
+     window.location.href = 'sgeeta6.html';
+}
+function goToSgeetaPage07() {
+     window.location.href = 'sgeeta7.html';
+}
+function goToSgeetaPage08() {
+     window.location.href = 'sgeeta8.html';
+}
+function goToSgeetaPage09() {
+     window.location.href = 'sgeeta9.html';
+}
+function goToSgeetaPage10() {
+     window.location.href = 'sgeeta10.html';
+}
+function goToSgeetaPage11() {
+     window.location.href = 'sgeeta11.html';
+}
+function goToSgeetaPage12() {
+     window.location.href = 'sgeeta12.html';
+}
+function goToSgeetaPage13() {
+     window.location.href = 'sgeeta13.html';
+}
+function goToSgeetaPage14() {
+     window.location.href = 'sgeeta14.html';
+}
+function goToSgeetaPage15() {
+     window.location.href = 'sgeeta15.html';
+}
+function goToSgeetaPage16() {
+     window.location.href = 'sgeeta16.html';
+}
+function goToSgeetaPage17() {
+     window.location.href = 'sgeeta17.html';
+}
+function goToSgeetaPage18() {
+     window.location.href = 'sgeeta18.html';
+}
+
 // JavaScript to disable right-click context menu globally and on a specific section
 document.addEventListener('DOMContentLoaded', function() {
     // Disable right-click context menu globally
