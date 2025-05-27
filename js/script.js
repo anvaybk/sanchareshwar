@@ -35,6 +35,10 @@ function goToNityaPathHome() {
      window.location.href = '../nityapathhome.html';
 }
 
+function goToBavaniHome() {
+     window.location.href = 'bavani.html';
+}
+
 // Chapter Next Previous link 10042025
 function goToChapterPage1() {
      window.location.href = 'chapter1.html';
