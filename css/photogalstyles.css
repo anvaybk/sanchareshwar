@@ -12,7 +12,7 @@ body {
 .gallery-container {
   display: flex;
   flex-direction: column;
-  height: 90vh;	/* 100vh */
+  height: 100vh;	/* 100vh */
 }
 
 .main-image {
