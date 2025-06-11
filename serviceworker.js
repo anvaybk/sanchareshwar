@@ -1,8 +1,13 @@
 // Last updated on 11062025
 
 const CACHE_NAME = 'sanchareshwar-v1.0.0.1';
-const INITIAL_CACHED_RESOURCES = [
-        "/", // Cache the root URL
+
+// Dynamically determine the base path (e.g., "/sanchareshwar")
+const BASE_PATH = self.location.pathname.replace(/\/serviceworker\.js$/, '');
+
+const RESOURCE_PATHS = [
+		// your existing list here...
+		"/", // Cache the root URL
         "/index.html", // Cache HTML file
         "/css/styles.css", // Cache CSS file
         "/css/homestyles.css",
@@ -194,92 +199,84 @@ const INITIAL_CACHED_RESOURCES = [
 		"/audios/Sanchareshwar-Panchapadi-Pad-4.mp3",
 		"/audios/Sanchareshwar-Panchapadi-Pad-5.mp3",
 		"/audios/Sanchareshwar-Tumhich-Na.mp3",
-		"/Sancharesha-Tavasharanam.mp3",
+		"/audios/Sancharesha-Tavasharanam.mp3",
 		"/audios/Sanchareshwar-Bavani.mp3"
 ];
-// Cached resources that match the following strings should not be periodically updated.
-// These are the tips html pages themselves, and their images.
-// Everything else, we try to update on a regular basis, to make sure lists of tips get updated and css/js are recent too.
-const DONT_UPDATE_RESOURCES = [
-    '/videos/'
-    // '/audios/'
-];
+
+// Prepend BASE_PATH to every resource
+const INITIAL_CACHED_RESOURCES = RESOURCE_PATHS.map(path => `${BASE_PATH}${path}`);
+
+const DONT_UPDATE_RESOURCES = ['/videos/'];
 
 self.addEventListener('install', event => {
     event.waitUntil((async () => {
-        const cache = await caches.open(CACHE_NAME);
-        await cache.addAll(INITIAL_CACHED_RESOURCES);
+        try {
+            const cache = await caches.open(CACHE_NAME);
+            await cache.addAll(INITIAL_CACHED_RESOURCES);
+            console.log('Resources cached successfully');
+        } catch (error) {
+            console.error('Failed to cache resources:', error);
+        }
     })());
 });
 
-// We have a cache-first strategy, where we look for resources in the cache first
-// and only on the network if this fails.
-// We also periodically update the cache in the background for the main pages.
 self.addEventListener('fetch', event => {
+    const requestUrl = new URL(event.request.url);
+
+    // Ignore non-HTTP(s) requests (e.g., chrome-extension://, file://, etc.)
+    if (requestUrl.protocol !== 'http:' && requestUrl.protocol !== 'https:') {
+        return;
+    }
+
     event.respondWith((async () => {
         const cache = await caches.open(CACHE_NAME);
-
-        // Try the cache first.
         const cachedResponse = await cache.match(event.request);
-        if (cachedResponse !== undefined) {
-            // Cache hit, let's send the cached resource.
+
+        if (cachedResponse) {
             return cachedResponse;
-        } else {
-            // Nothing in cache, let's go to the network.
+        }
 
-            try {
-                const fetchResponse = await fetch(event.request);
-                if (!event.request.url.includes('google-analytics') && !event.request.url.includes('browser-sync')) {
-                    // Save the new resource in the cache (responses are streams, so we need to clone in order to use it here).
-                    cache.put(event.request, fetchResponse.clone());
-                }
-
-                // And return it.
-                return fetchResponse;
-            } catch (e) {
-                // Fetching didn't work let's go to the error page.
-                if (event.request.mode === 'navigate') {
-                    await rememberRequestedTip(event.request.url);
-                    const errorResponse = await cache.match('/offline/');
-                    return errorResponse;
-                }
+        try {
+            const fetchResponse = await fetch(event.request);
+            if (
+                event.request.method === 'GET' &&
+                !event.request.url.includes('google-analytics') &&
+                !event.request.url.includes('browser-sync')
+            ) {
+                cache.put(event.request, fetchResponse.clone());
+            }
+            return fetchResponse;
+        } catch (e) {
+            if (event.request.mode === 'navigate') {
+                await rememberRequestedTip(event.request.url);
+                return await cache.match(`${BASE_PATH}/offline.html`);
             }
         }
     })());
 });
 
 async function rememberRequestedTip(url) {
-    let tips = await localforage.getItem('bg-tips');
-    if (!tips) {
-        tips = [];
-    }
-
+    let tips = await localforage.getItem('bg-tips') || [];
     tips.push(url);
     await localforage.setItem('bg-tips', tips);
 }
 
-// Listen to background sync events to load requested tips that couldn't be retrieved when offline.
 self.addEventListener('sync', event => {
     if (event.tag === 'bg-load-tip') {
         event.waitUntil(backgroundSyncLoadTips());
     }
 });
 
-// Fetch the requested tips now, and put them in cache.
 async function backgroundSyncLoadTips() {
     const tips = await localforage.getItem('bg-tips');
-    if (!tips || !tips.length) {
-        return;
-    }
+    if (!tips || tips.length === 0) return;
 
-    // Fetch and cache each tip.
     const cache = await caches.open(CACHE_NAME);
     await cache.addAll(tips);
 
-    // Re-engage user with a notification.
-    registration.showNotification(`${tips.length} DevTools Tips was/were loaded in the background and is/are ready`, {
-        icon: "/images/android-chrome-192x192.png",
-        body: "View the tip",
+    registration.showNotification(`${tips.length} tips loaded`, {
+        icon: `${BASE_PATH}/images/icon-256x256.png`,
+        body: "Tap to view",
         data: tips[0]
     });
 
@@ -287,12 +284,10 @@ async function backgroundSyncLoadTips() {
 }
 
 self.addEventListener('notificationclick', event => {
-    // assuming only one type of notification right now
     event.notification.close();
     clients.openWindow(event.notification.data);
 });
 
-// Listen the periodic background sync events to update the cached resources.
 self.addEventListener('periodicsync', event => {
     if (event.tag === 'update-cached-content') {
         event.waitUntil(updateCachedContent());
@@ -305,19 +300,14 @@ async function updateCachedContent() {
 
     for (const request of requests) {
         try {
-            // Fetch the new version.
             const fetchResponse = await fetch(request);
-            // Refresh the cache.
             await cache.put(request, fetchResponse.clone());
         } catch (e) {
-            // Fail silently, we'll just keep whatever we already had in the cache.
+            // Fail silently
         }
     }
 }
 
-// Find the entries that are already cached and that we do want to update. This way we only
-// update these ones and let the user visit new pages when they are online to populate more things
-// in the cache.
 async function findCacheEntriesToBeRefreshed() {
     const cache = await caches.open(CACHE_NAME);
     const requests = await cache.keys();
