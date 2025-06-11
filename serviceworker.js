@@ -1,6 +1,6 @@
-// Last updated on 21052025
+// Last updated on 11062025
 
-const CACHE_NAME = 'sanchareshwar-v1.0.0.0';
+const CACHE_NAME = 'sanchareshwar-v1.0.0.1';
 const INITIAL_CACHED_RESOURCES = [
         "/", // Cache the root URL
         "/index.html", // Cache HTML file
