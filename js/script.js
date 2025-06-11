@@ -1,5 +1,12 @@
 // script.js
 
+// Register this service worker as early as possible
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('../serviceworker.js').catch(console.error);
+  });
+}
+
 // Functions
 function startReading() {
     window.location.href = 'home.html';
