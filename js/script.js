@@ -1,11 +1,11 @@
 // script.js
 
 // Register this service worker as early as possible
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('serviceworker.js').catch(console.error);
-  });
-}
+//if ('serviceWorker' in navigator) {
+//  window.addEventListener('load', () => {
+//    navigator.serviceWorker.register('serviceworker.js').catch(console.error);
+//  });
+//}
 
 // Functions
 function startReading() {
