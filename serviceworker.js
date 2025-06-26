@@ -1,6 +1,6 @@
-// Last updated on 11062025
+// Last updated on 26062025
 
-const CACHE_NAME = 'sanchareshwar-v1.0.0.1';
+const CACHE_NAME = 'sanchareshwar-v1.0.0.2';
 
 // Dynamically determine the base path (e.g., "/sanchareshwar")
 const BASE_PATH = self.location.pathname.replace(/\/serviceworker\.js$/, '');
@@ -26,6 +26,8 @@ const RESOURCE_PATHS = [
 		"/panchapadi.html",
 		"/ashtotarnamavali.html",
 		"/sanchareshwargeeta.html",
+		"/pages/chapterprastavana.html",
+		"/pages/chapter0.html",
 		"/pages/chapter1.html",
         "/pages/chapter2.html",
         "/pages/chapter3.html",
@@ -163,7 +165,9 @@ const RESOURCE_PATHS = [
 		"/images/photo-gallery/Photo-30.webp",	
 		"/images/photo-gallery/Photo-31.webp",	
 		"/images/photo-gallery/Photo-32.webp",	
-		"/images/photo-gallery/Photo-33.webp",	
+		"/images/photo-gallery/Photo-33.webp",
+		"/images/SM-Prastavana-Icon.webp",	
+		"/images/SM-Sanchareshwar-atmashatak-Icon.webp",
 		"/audios/Sanchareshwar-Adhyay-1.mp3",
 		"/audios/Sanchareshwar-Adhyay-2.mp3",
 		"/audios/Sanchareshwar-Adhyay-3.mp3",
