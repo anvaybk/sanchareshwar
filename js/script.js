@@ -46,7 +46,10 @@ function goToBavaniHome() {
      window.location.href = 'bavani.html';
 }
 
-// Chapter Next Previous link 25062025
+// Chapter Next Previous link 26062025
+function goToChapterPagePrastavana() {
+     window.location.href = 'chapterprastavana.html';
+}
 function goToChapterPage0() {
      window.location.href = 'chapter0.html';
 }
