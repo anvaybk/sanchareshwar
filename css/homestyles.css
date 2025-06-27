@@ -25,8 +25,8 @@ header .header-content h2 {
 nav.menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: space-between; /* LW: space-around; */
+    padding: 10px;  /* LW: 20px; */
     background-color: bisque; /* New design: #ead0a8 OR #f4f4f4; */
 }
 

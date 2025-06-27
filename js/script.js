@@ -184,7 +184,7 @@ function goToDattaPathPage6() {
      window.location.href = 'dattapath6.html';
 }
 
-// Chapter Next Previous link for Ashtotarshat Namavali 03052025
+// Chapter Next Previous link for Ashtotarshat Namavali 03052025 + Below section is merged
 function goToAshtotarNamavaliHome() {
      window.location.href = '../ashtotarnamavali.html';
 }
@@ -215,6 +215,33 @@ function goToAshtotarNamavaliPage8() {
 function goToAshtotarNamavaliPage9() {
      window.location.href = 'ashtotarnamavali9.html';
 }
+
+// Chapter Next Previous link for Sanchareshwar Bhajanganga 27062025
+function goToBhajanGangaHome() {
+     window.location.href = '../bhajanganga.html';
+}
+function goToBhajanGangaPage01() {
+     window.location.href = 'bhajanganga1.html';
+}
+function goToBhajanGangaPage02() {
+     window.location.href = 'bhajanganga2.html';
+}
+function goToBhajanGangaPage03() {
+     window.location.href = 'bhajanganga3.html';
+}
+function goToBhajanGangaPage04() {
+     window.location.href = 'bhajanganga4.html';
+}
+function goToBhajanGangaPage05() {
+     window.location.href = 'bhajanganga5.html';
+}
+function goToBhajanGangaPage06() {
+     window.location.href = 'bhajanganga6.html';
+}
+function goToBhajanGangaPage07() {
+     window.location.href = 'bhajanganga7.html';
+}
+
 
 // Chapter Next Previous link for Sanchareshwar Geeta 18052025
 function goToSanchareshwarGeetaHome() {
