@@ -245,7 +245,7 @@ function goToBhajanGangaPage07() {
 
 // Chapter Next Previous link for Video Gallery 27062025
 function goToVideoSangrahHome() {
-     window.location.href = '../videogallery.html';
+     window.location.href = 'videogallery.html';
 }
 function goToAudioSangrahHome() {
      window.location.href = 'audiogallery.html';
