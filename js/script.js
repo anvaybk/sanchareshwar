@@ -243,6 +243,12 @@ function goToBhajanGangaPage07() {
 }
 
 
+// Chapter Next Previous link for Video Gallery 27062025
+function goToVideoSangrahHome() {
+     window.location.href = '../videogallery.html';
+}
+
+
 // Chapter Next Previous link for Sanchareshwar Geeta 18052025
 function goToSanchareshwarGeetaHome() {
      window.location.href = '../sanchareshwargeeta.html';
