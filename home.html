@@ -32,6 +32,159 @@ window.dataLayer = window.dataLayer || [];
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">	
     <link rel="icon" type="image/x-icon" href="favicon.ico">	
     <title> श्री संचारेश्वर ग्रंथसंपदा - Shri Sanchareshwar Granth Sampada </title>
+	 <!-- Styles -->
+  <style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #cae9ff;
+    color: #333;
+  }
+
+  header {
+    text-align: center;
+    background: #6b3e26;
+    padding: 1rem 1rem;
+  }
+
+  header h1 {
+    color: white;
+    font-size: 2rem;
+  }
+
+  header img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+
+  .icon-menu {
+    padding: 2rem 1rem;
+  }
+
+  .menu-grid {
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    /* grid-template-columns: repeat(2, 1fr);*/ /* Base: always 2 columns on mobile */
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Fallback for very narrow screens (optional, but safer)*/
+  @media (max-width: 320px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+ /* ≥300px: 3 columns */
+  @media (min-width: 300px) {
+    .menu-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+
+  /* ≥450px: 3 columns */
+  @media (min-width: 450px) {
+    .menu-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* ≥600px: 4 columns */
+  @media (min-width: 600px) {
+    .menu-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* ≥900px: 5 columns */
+  @media (min-width: 900px) {
+    .menu-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background: floralwhite;
+    border-radius: 10px;
+    padding: 1rem;
+	box-shadow: 0 0 10px #6b3e26;
+    /* ORG -> box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.2s;
+  }
+
+  .menu-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .menu-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+	object-fit: fill;
+  }
+
+  .menu-item span {
+    color: #512b07;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  footer {
+    background: #6b3e26;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .social-icons li img {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  
+ @media (max-width: 320px) {
+    .menu-grid {
+      grid-template-columns: repeat(2, 1fr); /* ensure at least 2 on smallest phones */
+   }
+ }
+ 
+ @media (max-width: 300px) {
+  .menu-item img {
+    width: 60px;
+    height: 60px;
+  }
+  .menu-item span {
+    font-size: 0.85rem;
+  }
+}
+</style>
 </head>
 <body>
   <!-- <header> -->
@@ -46,7 +199,7 @@ window.dataLayer = window.dataLayer || [];
 		श्री संचारेश्वर श्रोता म्हणुन नोंदणी करण्यासाठी इछुक भक्तांनी  येथे माहिती भरावी 📚 </a> -->
  		<!-- contents -->
 		</marquee> 	
-		<nav class="menu">
+		<br> <nav class="menu-grid">
 			<a href="https://anvaybk.github.io/sanchareshwar/chapters.html" class="menu-item">  
 				<img src="images/SM-Granth-Vachan-Icon-60x60.webp" alt="Granth Vachan">
 				<span>श्री संचारेश्वर चरित्रामृत </span> 
@@ -94,12 +247,11 @@ window.dataLayer = window.dataLayer || [];
 				<img src="images/SM-Samudayik-Upasana-Icon.png" alt="Sanchareshwar Samudayik Upasana">
 				<span> सामुदायिक उपासना </span> 
 			</a>  -->
-			
-			  <!--                      
+			  
 			<a href="https://anvaybk.github.io/sanchareshwar/pages/annualevents.html" class="menu-item">
 				<img src="images/AnnualEvent-Icon-60x60.webp" alt="Annual Events">
 				<span>वार्षिक उत्सव</span>
-			</a> -->
+			</a> 
 			
 			<a href="https://anvaybk.github.io/sanchareshwar/pages/videogallery.html" class="menu-item">
 				<img src="images/Video-Gallery-Icon-60x60.webp" alt="Video Gallery">
@@ -121,10 +273,10 @@ window.dataLayer = window.dataLayer || [];
 			</a> 
 			-->
 					
-			<!--  <a href="https://play.google.com/store/apps/details?id=io.github.anvaybk.sanchareshwar.twa&pcampaignid=website_app_share" class="menu-item">
+			<a href="https://play.google.com/store/apps/details?id=io.github.anvaybk.sanchareshwar.twa&pcampaignid=website_app_share" class="menu-item">
 				<img src="images/Google_play_store.svg" alt="Install Android App">
 				<span>  अँड्रॉइड ॲप्लिकेशन</span>
-			</a> -->
+			</a> 
 			
 		
 		 	<a href="https://anvaybk.github.io/sanchareshwar/pages/contactus.html" class="menu-item">
@@ -139,8 +291,8 @@ window.dataLayer = window.dataLayer || [];
 	<footer> 
         <div class="footer-content">
         <div> <ul class="social-icons"> 
-	  <li><a href="https://play.google.com/store/apps/details?id=io.github.anvaybk.sanchareshwar.twa&pcampaignid=website_app_share" target="_blank">
-		<img src="images/Google_play_store.svg" alt="sanchareshwar Android App"></a></li> 
+	 <!-- <li><a href="https://play.google.com/store/apps/details?id=io.github.anvaybk.sanchareshwar.twa&pcampaignid=website_app_share" target="_blank">
+		<img src="images/Google_play_store.svg" alt="sanchareshwar Android App"></a></li> -->
 	<!-- <li><a href="https://www.facebook.com/Shri.Sant.Pachlegaonkar.Maharaj" target="_blank">
 			<img src="images/Facebook-Icon-40x40.png" alt="Facebook"></a></li> -->
       <!--  <li><a href="https://www.instagram.com/shripachlegaonkarmaharaj/" target="_blank">

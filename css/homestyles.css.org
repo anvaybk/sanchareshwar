@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #6b3e26; /* Maroon color #800000 #ead0a8 */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header .header-content h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header .header-content h2 {
+    margin: 5px 0 0;
+    font-size: 18px;
+}
+
+nav.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: normal; /* LW: space-around; / space-between; */
+    padding: 10px;  /* LW: 20px; */
+    background-color: bisque; /* New design: #ead0a8 OR #f4f4f4; */
+}
+
+nav.menu .menu-item {
+    background-color: floralwhite;  /* Last it was white */
+    border-radius: 10px;
+    box-shadow: 0 0 10px #a52a2a; /* 0 0 10px rgba(0, 0, 0, 0.1); */
+    margin: 10px;
+    text-align: center;
+    flex: 1 1 calc(25% - 40px);
+    max-width: calc(25% - 40px);
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+nav.menu .menu-item img {
+    width: 60px;     /* auto 60px 150px LW:60px*/
+    height: 60px;     /* auto 60px 120px LW:60px */
+}
+
+nav.menu .menu-item span {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav.menu .menu-item:hover {
+    transform: translateY(-5px);
+}
+
+main .content {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #6b3e26; /* Old brown #76552b maroon */
+    color: white;  
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 100%; 
+   /* max-width: 1024px; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content .social-icons {
+    margin-bottom: 10px;
+}
+
+.footer-content .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+
+/* For screens wider than 950px, show 4 menu items 
+@media screen and (min-width: 914px) {
+    nav.menu {
+        display: flex;
+        justify-content: space-between; /* Distribute the items evenly */
+    }
+
+    nav.menu .menu-item {
+        flex: 1 1 calc(20% - 40px); /* Each item takes 25% of the width minus 40px */
+        max-width: calc(20% - 40px); /* Ensure max-width is maintained */
+    }
+} */
+
+@media screen and (max-width: 768px) {
+    nav.menu .menu-item {
+        flex: 1 1 calc(45% - 40px);  
+        max-width: calc(100% - 40px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav.menu .menu-item {
+        flex: 1 1 calc(45% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav.menu .menu-item {
+       flex: 1 1 calc(45% - 40px);  
+        max-width: calc(100% - 40px);
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    nav.menu .menu-item {
+        flex: 1 1 calc(45% - 40px);  
+        max-width: calc(100% - 40px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav.menu .menu-item {
+        flex: 1 1 calc(45% - 40px);   /* Org - flex: 1 1 calc(100% - 40px); */ 
+        max-width: calc(100% - 40px);
+    }
+
+    header .header-content h1 {
+        font-size: 22px;
+    }
+
+    header .header-content h2 {
+        font-size: 16px;
+    }
+}
+
+/* all.min.css */
+:host, :root {
+    --fa-font-solid: normal 900 1em / 1 "Font Awesome 6 Free";
+}
+:host, :root {
+    --fa-font-regular: normal 400 1em / 1 "Font Awesome 6 Free";
+}
+:host, :root {
+    --fa-font-brands: normal 400 1em / 1 "Font Awesome 6 Brands";
+}
