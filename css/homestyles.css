@@ -194,13 +194,13 @@ footer {
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #cae9ff;
+    background-color: #6b3e26;
     color: #333;
 	}
 
   header {
     text-align: center;
-    background: #274c77;
+    background: #6b3e26;
     padding: 1rem 1rem;
   }
 
@@ -273,7 +273,7 @@ body {
     background: floralwhite;
     border-radius: 10px;
     padding: 1rem;
-	box-shadow: 0 0 10px #a52a2a;
+	box-shadow: 0 0 10px #6b3e26;
     /* ORG -> box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
     transition: transform 0.2s;
   }
@@ -298,7 +298,7 @@ body {
   }
 
   footer {
-    background: #274c77;
+    background: #6b3e26;
     color: #fff;
     text-align: center;
     padding: 2rem 1rem;
