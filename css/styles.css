@@ -125,6 +125,7 @@ h1 {
 	font-weight: bold;
 	user-select: none;
 	-webkit-user-select: none;
+	padding: 20px	
 }
 
 /* Next Previous Buttons */
@@ -174,6 +175,7 @@ footer {
     margin-top: 20px;
     font-size: 14px;
     color: #666;
+	padding: 1px
 }
 
 .container-home {
