@@ -242,6 +242,93 @@ function goToBhajanGangaPage07() {
      window.location.href = 'bhajanganga7.html';
 }
 
+// Chapter Next Previous link for Samudaayik Upasana 01072025
+function goToSamudayikUpasanaHome() {
+     window.location.href = '../samudayikupasana.html';
+}
+function goToSupasanaPage01() {
+     window.location.href = 'supasana1.html';
+}
+function goToSupasanaPage02() {
+     window.location.href = 'supasana2.html';
+}
+function goToSupasanaPage03() {
+     window.location.href = 'supasana3.html';
+}
+function goToSupasanaPage04() {
+     window.location.href = 'supasana4.html';
+}
+function goToSupasanaPage05() {
+     window.location.href = 'supasana5.html';
+}
+function goToSupasanaPage06() {
+     window.location.href = 'supasana6.html';
+}
+function goToSupasanaPage07() {
+     window.location.href = 'supasana7.html';
+}
+function goToSupasanaPage08() {
+     window.location.href = 'supasana8.html';
+}
+function goToSupasanaPage09() {
+     window.location.href = 'supasana9.html';
+}
+function goToSupasanaPage10() {
+     window.location.href = 'supasana10.html';
+}
+function goToSupasanaPage11() {
+     window.location.href = 'supasana11.html';
+}
+function goToSupasanaPage12() {
+     window.location.href = 'supasana12.html';
+}
+function goToSupasanaPage13() {
+     window.location.href = 'supasana13.html';
+}
+function goToSupasanaPage14() {
+     window.location.href = 'supasana14.html';
+}
+function goToSupasanaPage15() {
+     window.location.href = 'supasana15.html';
+}
+function goToSupasanaPage16() {
+     window.location.href = 'supasana16.html';
+}
+function goToSupasanaPage17() {
+     window.location.href = 'supasana17.html';
+}
+function goToSupasanaPage18() {
+     window.location.href = 'supasana18.html';
+}
+function goToSupasanaPage19() {
+     window.location.href = 'supasana19.html';
+}
+function goToSupasanaPage20() {
+     window.location.href = 'supasana20.html';
+}
+function goToSupasanaPage21() {
+     window.location.href = 'supasana21.html';
+}
+function goToSupasanaPage22() {
+     window.location.href = 'supasana22.html';
+}
+function goToSupasanaPage23() {
+     window.location.href = 'supasana23.html';
+}
+function goToSupasanaPage24() {
+     window.location.href = 'supasana24.html';
+}
+function goToSupasanaPage25() {
+     window.location.href = 'supasana25.html';
+}
+function goToSupasanaPage26() {
+     window.location.href = 'supasana26.html';
+}
+function goToSupasanaPage27() {
+     window.location.href = 'supasana27.html';
+}
+
+
 
 // Chapter Next Previous link for Video Gallery 27062025
 function goToVideoSangrahHome() {
@@ -255,6 +342,9 @@ function goToPhotoSangrahHome() {
 }
 function goToAtmashatakHome() {
      window.location.href = 'atmashatak.html';
+}
+function goToAnnualEventHome() {
+     window.location.href = 'annualevents.html';
 }
 
 // Chapter Next Previous link for Sanchareshwar Geeta 18052025
