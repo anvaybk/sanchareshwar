@@ -1,6 +1,6 @@
-// Last updated on 26062025
+// Last updated on 01072025
 
-const CACHE_NAME = 'sanchareshwar-v1.0.0.2';
+const CACHE_NAME = 'sanchareshwar-v1.0.0.3';
 
 // Dynamically determine the base path (e.g., "/sanchareshwar")
 const BASE_PATH = self.location.pathname.replace(/\/serviceworker\.js$/, '');
@@ -26,6 +26,7 @@ const RESOURCE_PATHS = [
 		"/panchapadi.html",
 		"/ashtotarnamavali.html",
 		"/sanchareshwargeeta.html",
+		"/samudayikupasana.html",
 		"/pages/chapterprastavana.html",
 		"/pages/chapter0.html",
 		"/pages/chapter1.html",
@@ -105,6 +106,33 @@ const RESOURCE_PATHS = [
 		"/pages/sgeeta16.html",	
 		"/pages/sgeeta17.html",	
 		"/pages/sgeeta18.html",	
+		"/pages/supasana1.html",
+		"/pages/supasana2.html",
+		"/pages/supasana3.html",
+		"/pages/supasana4.html",
+		"/pages/supasana5.html",
+		"/pages/supasana6.html",
+		"/pages/supasana7.html",
+		"/pages/supasana8.html",
+		"/pages/supasana9.html",
+		"/pages/supasana10.html",
+		"/pages/supasana11.html",
+		"/pages/supasana12.html",
+		"/pages/supasana13.html",
+		"/pages/supasana14.html",
+		"/pages/supasana15.html",
+		"/pages/supasana16.html",
+		"/pages/supasana17.html",
+		"/pages/supasana18.html",
+		"/pages/supasana19.html",
+		"/pages/supasana20.html",
+		"/pages/supasana21.html",
+		"/pages/supasana22.html",
+		"/pages/supasana23.html",
+		"/pages/supasana24.html",
+		"/pages/supasana25.html",
+		"/pages/supasana26.html",
+		"/pages/supasana27.html",
 		"/images/SM-Granth-Vachan-Icon-60x60.webp",
 		"/images/SM-Panchapadi-60x60.webp",
 		"/images/SM-Bavani-60x60.webp",
@@ -116,6 +144,8 @@ const RESOURCE_PATHS = [
         "/images/Audio-Gallery-Icon-60x60.webp",
         "/images/Photo-Gallery-Icon-60x60.webp",
 		"/images/ContactUs-Icon-60x60.webp",
+		"/images/SM-Samudayik-Upasana-Icon.webp",
+		"/images/SM-Sanchareshwar-atmashatak-Icon.webp",
 		"/images/SM_Sanchareshwar_Maharaj_Panchapadi-60x60.png",
 		"/images/YTube-Icon-40x40.webp",
         "/images/Instagram-Icon-40x40.png",
