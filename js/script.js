@@ -327,7 +327,9 @@ function goToSupasanaPage26() {
 function goToSupasanaPage27() {
      window.location.href = 'supasana27.html';
 }
-
+function goToSupasanaPage28() {
+     window.location.href = 'supasana28.html';
+}
 
 
 // Chapter Next Previous link for Video Gallery 27062025

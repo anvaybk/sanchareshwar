@@ -133,6 +133,7 @@ const RESOURCE_PATHS = [
 		"/pages/supasana25.html",
 		"/pages/supasana26.html",
 		"/pages/supasana27.html",
+		"/pages/supasana28.html",
 		"/images/SM-Granth-Vachan-Icon-60x60.webp",
 		"/images/SM-Panchapadi-60x60.webp",
 		"/images/SM-Bavani-60x60.webp",
