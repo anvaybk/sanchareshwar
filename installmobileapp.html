@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Install Sanchareshwar Charitramrut App</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      font-family: 'Mukta', 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fffbe7, #fef6d9);
+      color: #2e1d00;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+      background: #fff9e6;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #b85c00;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    .instructions {
+      display: none;
+      margin-top: 20px;
+      border: 2px dashed #f1c40f;
+      padding: 20px;
+      background: #fff3cc;
+      border-radius: 12px;
+      text-align: left;
+    }
+    .instructions h2 {
+      color: #a15500;
+    }
+    .step {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
+    }
+    .footer a {
+      color: #b85c00;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    button.install-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #b85c00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button.install-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>चारित्रमृत अप्प इंस्टॉल करा</h1>
+    <p>ही एक आप्प जी ऑफलाइन चालती चालते, हल्का चा अनुभव करतो जातो.</p>
+
+    <div id="android" class="instructions">
+      <h2>📲 Android अप्प इंस्टॉल</h2>
+      <div class="step">1. तुमच्या Android मोबाईलमध्ये Chrome ब्राउझर उघडा.</div>
+      <div class="step">2. जर Chrome नसल्यास, Edge ब्राउझर तपासा. जर Edge सुद्धा उपलब्ध नसेल, तर Chrome किंवा Edge प्ले स्टोअरमधून इन्स्टॉल करा.</div>
+      <div class="step">3. खालील बटण क्लिक करून अ‍ॅप उघडा:</div>
+      <button class="install-btn" onclick="launchApp()">Open App in Browser</button>
+      <div class="step">4. ब्राउझरच्या वरच्या उजव्या कोपर्‍यात तीन डॉट्सवर क्लिक करा.</div>
+      <div class="step">5. "Add to Home Screen" निवडा आणि नंतर "Install" वर क्लिक करा.</div>
+    </div>
+
+    <div id="ios" class="instructions">
+      <h2>📱 iOS अप्प इंस्टॉल (Safari)</h2>
+      <div class="step">1. ही पृष्ठा साफारी मध्ये खोला.</div>
+      <div class="step">2. टाप "Share" बटन <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Ios-share-icon.png" alt="Share" width="16"> कलिक करा.</div>
+      <div class="step">3. "Add to Home Screen" ची निवड करा आणि "Install" क्लिक करा.</div>
+    </div>
+
+    <div id="desktop" class="instructions">
+      <h2>💻 Desktop अप्प इंस्टॉल</h2>
+      <div class="step">1. Chrome किंवा Edge मध्ये खालील URL उघडा:</div>
+      <code>https://anvaybk.github.io/sanchareshwar/home.html</code>
+      <div class="step">2. ब्राउझरच्या address bar मध्ये "Install" किंवा menu मधून "Install App" निवडा.</div>
+    </div>
+
+    <div class="footer">
+      प्रोजेक्ट: श्री मुक्तेश्वर उपासना मंडळ, पुणे | <a href="home.html">प्रमुख जा</a>
+    </div>
+  </div>
+
+  <script>
+    // Register service worker
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('serviceworker.js')
+        .then(() => console.log('Service Worker registered successfully'))
+        .catch(err => console.error('Service Worker registration failed:', err));
+    }
+
+    let deferredPrompt;
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+
+      const os = getOS();
+      const btnId = os === 'android' ? 'androidInstallBtn' : (os === 'desktop' ? 'desktopInstallBtn' : null);
+      if (btnId) {
+        const btn = document.getElementById(btnId);
+        if (btn) {
+          btn.disabled = false;
+          btn.addEventListener('click', () => {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the A2HS prompt');
+              } else {
+                console.log('User dismissed the A2HS prompt');
+              }
+              deferredPrompt = null;
+            });
+          });
+        }
+      }
+    });
+
+    function getOS() {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      if (/android/i.test(userAgent)) return "android";
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) return "ios";
+      return "desktop";
+    }
+
+    function launchApp() {
+      const chromeIntent = 'intent://anvaybk.github.io/sanchareshwar/home.html#Intent;scheme=https;package=com.android.chrome;end';
+      const edgeURL = 'microsoft-edge:https://anvaybk.github.io/sanchareshwar/home.html';
+
+      // Try opening Chrome
+      window.location.href = chromeIntent;
+
+      // Fallback to Edge after delay (cannot confirm existence, workaround only)
+      setTimeout(() => {
+        window.location.href = edgeURL;
+      }, 3000);
+    }
+
+    const os = getOS();
+    document.getElementById(os).style.display = "block";
+  </script>
+</body>
+</html>
