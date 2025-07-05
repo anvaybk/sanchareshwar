@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json">
+  <title>Sanchareshwar Charitramrut</title>
+  <style>
+    #install-button {
+      display: none;
+      background-color: orange;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .ios-overlay {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: #fff3cd;
+      border: 1px solid #ffeeba;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-size: 16px;
+      z-index: 9999;
+      text-align: center;
+    }
+
+    .ios-overlay .share-icon {
+      width: 20px;
+      vertical-align: middle;
+    }
+
+    .ios-overlay button {
+      margin-top: 10px;
+      background-color: #ffa500;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>श्री संचारेश्वर चरित्रामृत </h1>
+
+  <button id="install-button">Install App</button>
+
+  <!-- iOS Prompt Overlay -->
+  <div id="ios-install-prompt" style="display:none;">
+    <div class="ios-overlay">
+      <p>💡 <strong>Install this app:</strong></p>
+      <p>1. Tap the <img src="images/safari-share-icon.png" alt="Share" class="share-icon"> icon in Safari.</p>
+      <p>2. Then choose <strong>“Add to Home Screen”</strong>.</p>
+      <button onclick="hideIosPrompt()">Got it!</button>
+    </div>
+  </div>
+
+  <script>
+    let deferredPrompt;
+
+    // Android: Show install prompt
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const installBtn = document.getElementById('install-button');
+      installBtn.style.display = 'block';
+
+      installBtn.addEventListener('click', () => {
+        installBtn.style.display = 'none';
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the install prompt');
+          } else {
+            console.log('User dismissed the install prompt');
+          }
+          deferredPrompt = null;
+        });
+      });
+    });
+
+    // iOS detection
+    function isIos() {
+      const ua = window.navigator.userAgent.toLowerCase();
+      return /iphone|ipad|ipod/.test(ua);
+    }
+
+    function isInStandaloneMode() {
+      return ('standalone' in window.navigator && window.navigator.standalone);
+    }
+
+    function hideIosPrompt() {
+      document.getElementById('ios-install-prompt').style.display = 'none';
+    }
+
+    // Show iOS install prompt if needed
+    window.addEventListener('load', () => {
+      if (isIos() && !isInStandaloneMode()) {
+        document.getElementById('ios-install-prompt').style.display = 'block';
+      }
+    });
+
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('serviceworker.js')
+        .then(reg => console.log('Service Worker Registered!', reg))
+        .catch(err => console.error('Service Worker registration failed:', err));
+    }
+  </script>
+</body>
+</html>
