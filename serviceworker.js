@@ -1,6 +1,6 @@
-// Last updated on 01072025
+// Last updated on 12072025
 
-const CACHE_NAME = 'sanchareshwar-v1.0.0.3';
+const CACHE_NAME = 'sanchareshwar-v1.0.0.4';
 
 // Dynamically determine the base path (e.g., "/sanchareshwar")
 const BASE_PATH = self.location.pathname.replace(/\/serviceworker\.js$/, '');
@@ -88,6 +88,7 @@ const RESOURCE_PATHS = [
 		"/pages/ashtotarnamavali7.html",
 		"/pages/ashtotarnamavali8.html",
 		"/pages/ashtotarnamavali9.html",
+		"/pages/sgeetaprastavana.html",
 		"/pages/sgeeta1.html",	
 		"/pages/sgeeta2.html",	
 		"/pages/sgeeta3.html",	

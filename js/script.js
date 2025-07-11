@@ -353,6 +353,9 @@ function goToAnnualEventHome() {
 function goToSanchareshwarGeetaHome() {
      window.location.href = '../sanchareshwargeeta.html';
 }
+function goToSgeetaPagePrastavana() {
+     window.location.href = 'sgeetaprastavana.html';
+}
 function goToSgeetaPage01() {
      window.location.href = 'sgeeta1.html';
 }
