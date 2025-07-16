@@ -1,77 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>श्री संचारेश्वर चरित्रामृत</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <meta name="theme-color" content="#000000">
-  <style>
-    #install-button {
-      display: none;
-      background-color: orange;
-      padding: 10px 20px;
-      font-size: 24px;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>श्री संचारेश्वर चरित्रामृत</h1>
-  <button id="install-button">Install App</button>
-
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XKHEQM95ZQ"></script>
   <script>
-    let deferredPrompt;
-
-    // Handle Android Install
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-
-      const installBtn = document.getElementById('install-button');
-      installBtn.style.display = 'block';
-      installBtn.textContent = 'Install App';
-
-      installBtn.onclick = () => {
-        installBtn.style.display = 'none';
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choice) => {
-          console.log('User choice:', choice.outcome);
-          deferredPrompt = null;
-        });
-      };
-    });
-
-    // Handle iOS Safari (no native prompt)
-    window.addEventListener('load', () => {
-      const isIos = /iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());
-      const isInStandalone = window.navigator.standalone;
-
-      if (isIos && !isInStandalone) {
-        const installBtn = document.getElementById('install-button');
-        installBtn.style.display = 'block';
-        installBtn.textContent = 'Add to Home Screen';
-        installBtn.onclick = () => {
-          alert('iPhone वापरकर्त्यांनी Safari मध्ये Share बटणावर क्लिक करून "Add to Home Screen" निवडावे.');
-        };
-      }
-    });
-
-    // Hide if already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      document.getElementById('install-button').style.display = 'none';
-    }
-
-    // Service Worker registration
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('serviceworker.js')
-        .then((reg) => console.log('Service worker registered:', reg.scope))
-        .catch((err) => console.error('Service worker failed:', err));
-    }
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XKHEQM95ZQ');
   </script>
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Install Sanchareshwar Charitramrut App</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/homestyles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">	
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <style>
+	  body {
+	  font-family: 'Mukta', 'Segoe UI', sans-serif;
+	  background: linear-gradient(to bottom, #fffbe7, #fef6d9);
+	  color: #2e1d00;
+	  margin: 0;
+	  min-height: 100vh; /* ✅ Ensures full screen height */
+	  display: flex;
+	  justify-content: center;
+	  align-items: flex-start;
+	  padding: 1rem;
+	  box-sizing: border-box;
+	}
+
+	.container {
+	  width: 100%;
+	  max-width: 720px;
+	  background: #fff9e6;
+	  padding: 20px;
+	  border-radius: 16px;
+	  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	  text-align: center;
+	}
+
+	.instructions {
+	  display: none;
+	  margin-top: 20px;
+	  border: 2px dashed #f1c40f;
+	  padding: 20px;
+	  background: #fff3cc;
+	  border-radius: 12px;
+	  text-align: left;
+	}
+
+	h1 {
+	  color: white;
+	  font-size: 2rem;
+	}
+
+	.step {
+	  margin: 10px 0;
+	  line-height: 1.6;
+	}
+
+	.footer {
+	  margin-top: 40px;
+	  font-size: 0.9em;
+	  color: #888;
+	}
+
+	.footer a {
+	  color: #b85c00;
+	  text-decoration: none;
+	}
+
+	.footer a:hover {
+	  text-decoration: underline;
+	}
+
+	button.install-btn {
+	  margin-top: 15px;
+	  padding: 10px 20px;
+	  background-color: #b85c00;
+	  color: white;
+	  border: none;
+	  border-radius: 8px;
+	  font-size: 1rem;
+	  cursor: pointer;
+	}
+
+	button.install-btn:disabled {
+	  background-color: #ccc;
+	  cursor: not-allowed;
+	}
+
+	@media (max-width: 600px) {
+	  h1 {
+		font-size: 1.5rem;
+	  }
+	}
+
+  </style>
+</head>
+
+<body>
+  <div class="container-heading" oncontextmenu="return false;">
+    <h1> संचारेश्वर चरित्रामृत अ‍ॅप इंस्टॉल करा </h1>
+
+    <div class="chapter-content" oncontextmenu="return false;"> 
+      <div class="container">
+        <div class="step" style="color:brown"> श्री संचारेश्वर चरित्रामृत ग्रंथ आता मोबाईल ॲपवर उपलब्ध </div>
+
+        <!-- Android Instructions -->
+        <div id="android" class="instructions">
+          <h3>📲 Android अ‍ॅप इंस्टॉल</h3>
+          <div class="step">प्ले स्टोअरमधून इन्स्टॉल करा.</div>
+          <a href="https://play.google.com/store/apps/details?id=io.github.anvaybk.sanchareshwar.twa" target="_blank">  
+            <img src="images/google-play.png" alt="sanchareshwar Android App" width="60%"> 
+          </a>
+          <div class="step">किंवा खालील इन्स्टॉल करा.</div>
+          <div class="step">1. Chrome ब्राउझर उघडा. नसेल तर Edge वापरा.</div>
+          <div class="step">2. खालील बटण क्लिक करा:</div>
+          <button class="install-btn" onclick="launchApp()">Open App in Browser</button>
+          <div class="step">3. "Add to Home Screen" निवडा.</div>
+        </div>
+
+        <!-- iOS Instructions -->
+        <div id="ios" class="instructions">
+          <h3>📱 iOS अ‍ॅप इंस्टॉल (Safari)</h3>
+          <div class="step">Safari मध्ये खालील लिंक उघडा:</div>
+          <a href="https://anvaybk.github.io/sanchareshwar/home.html">  
+            <img src="images/SM-iOS-Web-Link.png" alt="iOS Link" width="192"> 
+          </a>
+          <div class="step">Share बटण टॅप करा → Add to Home Screen → Add.</div>
+        </div>
+
+        <!-- Desktop Instructions -->
+        <div id="desktop" class="instructions">
+          <h2 style="color:brown">💻 Desktop अ‍ॅप इंस्टॉल</h2>
+          <div class="step">1. Chrome किंवा Edge मध्ये खालील URL उघडा:</div>
+		  <div class="step">2. खालील बटण क्लिक करा:</div>
+          <button class="install-btn" onclick="launchApp()">Open App in Browser</button>
+          <div class="step">3. "Add to Home Screen" निवडा.</div>
+          <!-- <code>https://anvaybk.github.io/sanchareshwar/home.html</code> -->
+          <div class="step">2. ब्राउझर address bar मधून "Install App" निवडा.</div>
+        </div>
+
+        <div class="footer">
+          <hr>
+          प्रोजेक्ट: <br> श्री मुक्तेश्वर उपासना मंडळ, <br> दास मोहन कुळकर्णी, पाचलेगावकर कृत | <a href="home.html">🏠</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Service worker
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('serviceworker.js')
+        .then(() => console.log('Service Worker registered'))
+        .catch(err => console.error('Service Worker failed:', err));
+    }
+
+    // Show relevant instruction block
+    function getOS() {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android/i.test(ua)) return "android";
+      if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) return "ios";
+      if (/Windows|Macintosh|Linux/i.test(ua)) return "desktop";
+      return "desktop";
+    }
+
+    const os = getOS();
+    const section = document.getElementById(os);
+    if (section) {
+      section.style.display = "block";
+    } else {
+      document.getElementById('android').style.display = "block";
+      document.getElementById('ios').style.display = "block";
+      document.getElementById('desktop').style.display = "block";
+    }
+
+    // Android App launcher: default Chrome, fallback to Edge with prompt
+    function launchApp() {
+      const chromeURL = 'googlechrome://navigate?url=https://anvaybk.github.io/sanchareshwar/home.html';
+      const edgeURL = 'microsoft-edge:https://anvaybk.github.io/sanchareshwar/home.html';
+      const webURL = 'https://anvaybk.github.io/sanchareshwar/home.html';
+
+      // Try Chrome first
+      try {
+        window.location.href = chromeURL;
+      } catch (e) {
+        console.warn('Chrome not available.');
+      }
+
+      // Wait and fallback
+      setTimeout(() => {
+        // Check if Edge is likely available
+        const ua = navigator.userAgent.toLowerCase();
+        if (ua.includes('edg')) {
+          const useEdge = confirm("Chrome browser not detected. Do you want to open the app in Microsoft Edge?");
+          if (useEdge) {
+            window.location.href = edgeURL;
+          } else {
+            window.location.href = webURL;
+          }
+        } else {
+          // Final fallback
+          window.location.href = webURL;
+        }
+      }, 2000);
+    }
+  </script>
 </body>
 </html>
