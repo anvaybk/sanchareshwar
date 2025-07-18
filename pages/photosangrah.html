@@ -46,82 +46,210 @@
       <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
       <link rel="icon" type="image/x-icon" href="../favicon.ico">
 	  <title> फोटो संग्रह </title>
-	
-		<style>
-		.container-heading {
-		max-width: auto;
-		margin: 1px auto;
-		background-color: #6b3e26; /* Old brown maroon #76552b */
-		padding: 10px;
-		border-radius: 8px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-		/* height: auto; */
-		/* max-height: fit-content; */
-		/* max-height: fit-content; */
-		color: white;
-		text-align: center;	
-		}
-		</style>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      background: #6b3e26;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin: 0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .gallery-item {
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .caption {
+      padding: 10px;
+      text-align: center;
+      font-size: 0.95rem;
+      background-color: floralwhite;
+    }
+
+    /* Lightbox styles */
+    #lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+    }
+
+    .lightbox-caption {
+      color: #fff;
+      font-size: 1rem;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .close, .nav {
+      position: absolute;
+      color: white;
+      font-size: 2rem;
+      padding: 15px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .close {
+      top: 10px;
+      right: 20px;
+    }
+
+    .nav.prev {
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .nav.next {
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @media (max-width: 600px) {
+      .caption {
+        font-size: 0.85rem;
+      }
+
+      .close, .nav {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container-heading" oncontextmenu="return false;">
+
+<!-- <h1>फोटो संग्रह</h1> -->
+
+ <div class="container-heading" oncontextmenu="return false;">
         <h1> फोटो संग्रह   </h1>
-    <div class="chapter-content" oncontextmenu="return false;"> 
+ <div class="chapter-content" oncontextmenu="return false;"> 
 
-<div class="gallery-container">
-  <div class="main-image" id="mainImageContainer"> 
-    <img id="mainImage" src="../images/photo-gallery/Photo-0.webp" alt="Main Image" /> 
-  </div>
-
-  <div class="thumbnail-row" id="thumbnails">
-    <!-- Add more thumbnails here -->
-    <img src="../images/photo-gallery/Photo-0.webp" data-full="../images/photo-gallery/Photo-0.webp" alt="Thumb 0" />
-    <img src="../images/photo-gallery/Photo-1.webp" data-full="../images/photo-gallery/Photo-1.webp" alt="Thumb 1" />
-    <img src="../images/photo-gallery/Photo-2.webp" data-full="../images/photo-gallery/Photo-2.webp" alt="Thumb 2" />
-    <img src="../images/photo-gallery/Photo-3.webp" data-full="../images/photo-gallery/Photo-3.webp" alt="Thumb 3" />
-    <img src="../images/photo-gallery/Photo-4.webp" data-full="../images/photo-gallery/Photo-4.webp" alt="Thumb 4" />
-    <img src="../images/photo-gallery/Photo-5.webp" data-full="../images/photo-gallery/Photo-5.webp" alt="Thumb 5" />
-	<img src="../images/photo-gallery/Photo-6.webp" data-full="../images/photo-gallery/Photo-6.webp" alt="Thumb 6" />
-    <img src="../images/photo-gallery/Photo-7.webp" data-full="../images/photo-gallery/Photo-7.webp" alt="Thumb 7" />
-    <img src="../images/photo-gallery/Photo-8.webp" data-full="../images/photo-gallery/Photo-8.webp" alt="Thumb 8" />
-    <img src="../images/photo-gallery/Photo-9.webp" data-full="../images/photo-gallery/Photo-9.webp" alt="Thumb 9" />
-    <img src="../images/photo-gallery/Photo-10.webp" data-full="../images/photo-gallery/Photo-10.webp" alt="Thumb 10" />
-    <img src="../images/photo-gallery/Photo-11.webp" data-full="../images/photo-gallery/Photo-11.webp" alt="Thumb 11" />
-	<img src="../images/photo-gallery/Photo-12.webp" data-full="../images/photo-gallery/Photo-12.webp" alt="Thumb 12" />
-    <img src="../images/photo-gallery/Photo-13.webp" data-full="../images/photo-gallery/Photo-13.webp" alt="Thumb 13" />
-    <img src="../images/photo-gallery/Photo-14.webp" data-full="../images/photo-gallery/Photo-14.webp" alt="Thumb 14" />
-    <img src="../images/photo-gallery/Photo-15.webp" data-full="../images/photo-gallery/Photo-15.webp" alt="Thumb 15" />
-    <img src="../images/photo-gallery/Photo-16.webp" data-full="../images/photo-gallery/Photo-16.webp" alt="Thumb 16" />
-    <img src="../images/photo-gallery/Photo-17.webp" data-full="../images/photo-gallery/Photo-17.webp" alt="Thumb 17" />
-	<img src="../images/photo-gallery/Photo-18.webp" data-full="../images/photo-gallery/Photo-18.webp" alt="Thumb 18" />
-	<img src="../images/photo-gallery/Photo-19.webp" data-full="../images/photo-gallery/Photo-19.webp" alt="Thumb 19" />
-	<img src="../images/photo-gallery/Photo-20.webp" data-full="../images/photo-gallery/Photo-20.webp" alt="Thumb 20" />
-	<img src="../images/photo-gallery/Photo-21.webp" data-full="../images/photo-gallery/Photo-21.webp" alt="Thumb 21" />
-	<img src="../images/photo-gallery/Photo-22.webp" data-full="../images/photo-gallery/Photo-22.webp" alt="Thumb 22" />
-	<img src="../images/photo-gallery/Photo-23.webp" data-full="../images/photo-gallery/Photo-23.webp" alt="Thumb 23" />
-	<img src="../images/photo-gallery/Photo-24.webp" data-full="../images/photo-gallery/Photo-24.webp" alt="Thumb 24" />
-	<img src="../images/photo-gallery/Photo-25.webp" data-full="../images/photo-gallery/Photo-25.webp" alt="Thumb 25" />
-	<img src="../images/photo-gallery/Photo-26.webp" data-full="../images/photo-gallery/Photo-26.webp" alt="Thumb 26" />
-	<img src="../images/photo-gallery/Photo-27.webp" data-full="../images/photo-gallery/Photo-27.webp" alt="Thumb 27" />
-	<img src="../images/photo-gallery/Photo-28.webp" data-full="../images/photo-gallery/Photo-28.webp" alt="Thumb 28" />
-	<img src="../images/photo-gallery/Photo-29.webp" data-full="../images/photo-gallery/Photo-29.webp" alt="Thumb 29" />
-	<img src="../images/photo-gallery/Photo-30.webp" data-full="../images/photo-gallery/Photo-30.webp" alt="Thumb 30" />
-	<img src="../images/photo-gallery/Photo-31.webp" data-full="../images/photo-gallery/Photo-31.webp" alt="Thumb 31" />
-	<img src="../images/photo-gallery/Photo-32.webp" data-full="../images/photo-gallery/Photo-32.webp" alt="Thumb 32" />
-	<img src="../images/photo-gallery/Photo-33.webp" data-full="../images/photo-gallery/Photo-33.webp" alt="Thumb 33" />
-	
-    <!-- ... more as needed -->
-			</div>
-		</div>
-		
-		 <!-- <div> <button onclick="goToMainHome()"> 🏠 मुख्य पान</button> </div> -->
-	</div>
-	
+<div class="gallery-grid" id="gallery">
+  <!-- JavaScript will populate this -->
 </div>
-	
-<script src="https://anvaybk.github.io/sanchareshwar/js/photogalscript.js"></script>
-<script src="https://anvaybk.github.io/sanchareshwar/js/script.js"></script>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox(event)">
+  <span class="close" onclick="closeLightbox(event)">&times;</span>
+  <span class="nav prev" onclick="prevImage(event)">&#10094;</span>
+  <img id="lightbox-img" src="" alt="Fullscreen Photo" />
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+  <span class="nav next" onclick="nextImage(event)">&#10095;</span>
+</div>
+
+<script>
+  const totalImages = 34; // Number of images
+  const gallery = document.getElementById('gallery');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  let currentIndex = 0;
+
+  const captions = Array.from({ length: totalImages }, (_, i) =>
+    `फोटो क्रमांक ${i + 1}` // You can customize these per image
+  );
+
+  // Generate gallery
+  for (let i = 0; i < totalImages; i++) {
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
+    item.innerHTML = `
+      <img src="../images/photo-gallery/Photo-${i}.webp" alt="फोटो ${i + 1}" loading="lazy" data-index="${i}" />
+      <div class="caption">${captions[i]}</div>
+    `;
+    gallery.appendChild(item);
+  }
+
+  gallery.addEventListener('click', e => {
+    if (e.target.tagName === 'IMG') {
+      currentIndex = parseInt(e.target.dataset.index);
+      openLightbox();
+    }
+  });
+
+  function openLightbox() {
+    lightboxImg.src = `../images/photo-gallery/Photo-${currentIndex}.webp`;
+    lightboxCaption.textContent = captions[currentIndex];
+    lightbox.style.display = 'flex';
+  }
+
+  function closeLightbox(e) {
+    if (e.target === lightbox || e.target.classList.contains('close')) {
+      lightbox.style.display = 'none';
+    }
+  }
+
+  function prevImage(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    openLightbox();
+  }
+
+  function nextImage(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % totalImages;
+    openLightbox();
+  }
+
+  document.addEventListener('keydown', e => {
+    if (lightbox.style.display === 'flex') {
+      if (e.key === 'ArrowLeft') prevImage(e);
+      if (e.key === 'ArrowRight') nextImage(e);
+      if (e.key === 'Escape') lightbox.style.display = 'none';
+    }
+  });
+</script>
+</div>
+	<div class="btn-group" style="width:100%">
+		<!-- <button style="width:33.3%" onclick="goToChapterPagePrastavana()"> ◀ </button>  -->
+		<button style="width:100%" onclick="goToHome()"> 🏠 </button>  
+		<!-- <button style="width:33.3%" onclick="goToChapterPage0()"> ▶ </button>    -->
+	</div>
+</div>
 </body>
 </html>
-
-<!-- सदुरू -->
