@@ -1,4 +1,4 @@
-// Last updated on 12072025
+// Last updated on 21072025
 
 const CACHE_NAME = 'sanchareshwar-v1.0.0.4';
 
@@ -69,6 +69,10 @@ const RESOURCE_PATHS = [
 		"/pages/videogallery.html",
 		"/pages/bavani.html",
         "/pages/atmashatak.html",
+		"/pages/atmashatak1.html",
+		"/pages/atmashatak2.html",
+		"/pages/atmashatak3.html",
+		"/pages/atmashatak4.html",
 		"/pages/socialmedia.html",
 		"/pages/privacy-policy.html",
 		"/pages/terms-conditions.html",
@@ -79,6 +83,7 @@ const RESOURCE_PATHS = [
 		"/pages/dattapath4.html",
 		"/pages/dattapath5.html",
 		"/pages/dattapath6.html",
+		"/pages/dattapath7.html",
 		"/pages/ashtotarnamavali1.html",
 		"/pages/ashtotarnamavali2.html",
 		"/pages/ashtotarnamavali3.html",

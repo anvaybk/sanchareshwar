@@ -345,9 +345,6 @@ function goToAudioSangrahHome() {
 function goToPhotoSangrahHome() {
      window.location.href = 'photosangrah.html';
 }
-function goToAtmashatakMenuHome() {
-     window.location.href = 'atmashatakmenu.html';
-}
 function goToAnnualEventHome() {
      window.location.href = 'annualevents.html';
 }
