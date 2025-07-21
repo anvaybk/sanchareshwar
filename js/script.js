@@ -161,7 +161,7 @@ function goToPanchapadiPage6() {
      window.location.href = 'panchapadi6.html';
 }
 
-// Chapter Next Previous link for Datta Path 28042025
+// Chapter Next Previous link for Datta Path 28042025 and 21072025
 function goToDattaPathHome() {
      window.location.href = '../dattapath.html';
 }
@@ -182,6 +182,9 @@ function goToDattaPathPage5() {
 }
 function goToDattaPathPage6() {
      window.location.href = 'dattapath6.html';
+}
+function goToDattaPathPage7() {
+     window.location.href = 'dattapath7.html';
 }
 
 // Chapter Next Previous link for Ashtotarshat Namavali 03052025 + Below section is merged
@@ -342,11 +345,28 @@ function goToAudioSangrahHome() {
 function goToPhotoSangrahHome() {
      window.location.href = 'photosangrah.html';
 }
-function goToAtmashatakHome() {
-     window.location.href = 'atmashatak.html';
+function goToAtmashatakMenuHome() {
+     window.location.href = 'atmashatakmenu.html';
 }
 function goToAnnualEventHome() {
      window.location.href = 'annualevents.html';
+}
+
+// Chapter Next Previous link for Atmashatak Bhajgovindam 27072025
+function goToAtmashatakHome() {
+     window.location.href = 'atmashatak.html';
+}
+function goToAtmashatakPage1() {
+     window.location.href = 'atmashatak1.html';
+}
+function goToAtmashatakPage2() {
+     window.location.href = 'atmashatak2.html';
+}
+function goToAtmashatakPage3() {
+     window.location.href = 'atmashatak3.html';
+}
+function goToAtmashatakPage4() {
+     window.location.href = 'atmashatak4.html';
 }
 
 // Chapter Next Previous link for Sanchareshwar Geeta 18052025
