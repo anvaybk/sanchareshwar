@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 600px; /* LW 600px; */
     margin: 20px auto;
 	background-color: #6b3e26; /* Old maroon, brown */
 	/* background-color: #fff; */
