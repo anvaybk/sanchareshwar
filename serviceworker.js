@@ -1,6 +1,6 @@
-// Last updated on 21072025
+// Last updated on 04082025
 
-const CACHE_NAME = 'sanchareshwar-v1.0.0.4';
+const CACHE_NAME = 'sanchareshwar-v1.0.0.5';
 
 // Dynamically determine the base path (e.g., "/sanchareshwar")
 const BASE_PATH = self.location.pathname.replace(/\/serviceworker\.js$/, '');
@@ -27,6 +27,7 @@ const RESOURCE_PATHS = [
 		"/ashtotarnamavali.html",
 		"/sanchareshwargeeta.html",
 		"/samudayikupasana.html",
+		"/gurugeeta.html",
 		"/pages/chapterprastavana.html",
 		"/pages/chapter0.html",
 		"/pages/chapter1.html",
@@ -140,6 +141,12 @@ const RESOURCE_PATHS = [
 		"/pages/supasana26.html",
 		"/pages/supasana27.html",
 		"/pages/supasana28.html",
+		"/pages/gurugeeta1.html",
+		"/pages/gurugeeta2.html",
+		"/pages/gurugeeta3.html",
+		"/pages/gurugeeta4.html",
+		"/pages/gurugeeta5.html",
+		"/pages/gurugeeta6.html",
 		"/images/SM-Granth-Vachan-Icon-60x60.webp",
 		"/images/SM-Panchapadi-60x60.webp",
 		"/images/SM-Bavani-60x60.webp",
@@ -153,6 +160,7 @@ const RESOURCE_PATHS = [
 		"/images/ContactUs-Icon-60x60.webp",
 		"/images/SM-Samudayik-Upasana-Icon.webp",
 		"/images/SM-Sanchareshwar-atmashatak-Icon.webp",
+		"/images/SM-Gurugeeta-60x60.webp",
 		"/images/SM_Sanchareshwar_Maharaj_Panchapadi-60x60.png",
 		"/images/YTube-Icon-40x40.webp",
         "/images/Instagram-Icon-40x40.png",

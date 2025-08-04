@@ -428,6 +428,29 @@ function goToSgeetaPage18() {
      window.location.href = 'sgeeta18.html';
 }
 
+// Chapter Next Previous link for Gurugeeta 04082025
+function goToGurugeetaHome() {
+     window.location.href = '../gurugeeta.html';
+}
+function goToGurugeetaPage1() {
+     window.location.href = 'gurugeeta1.html';
+}
+function goToGurugeetaPage2() {
+     window.location.href = 'gurugeeta2.html';
+}
+function goToGurugeetaPage3() {
+     window.location.href = 'gurugeeta3.html';
+}
+function goToGurugeetaPage4() {
+     window.location.href = 'gurugeeta4.html';
+}
+function goToGurugeetaPage5() {
+     window.location.href = 'gurugeeta5.html';
+}
+function goToGurugeetaPage6() {
+     window.location.href = 'gurugeeta6.html';
+}
+
 // JavaScript to disable right-click context menu globally and on a specific section
 document.addEventListener('DOMContentLoaded', function() {
     // Disable right-click context menu globally
