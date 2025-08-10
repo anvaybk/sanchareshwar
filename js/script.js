@@ -219,7 +219,8 @@ function goToAshtotarNamavaliPage9() {
      window.location.href = 'ashtotarnamavali9.html';
 }
 
-// Chapter Next Previous link for Sanchareshwar Bhajanganga 27062025
+// Chapter Next Previous link for Sanchareshwar Bhajanganga 27062025.
+// Added Bhajanganga Geet8 on 10082025
 function goToBhajanGangaHome() {
      window.location.href = '../bhajanganga.html';
 }
@@ -243,6 +244,9 @@ function goToBhajanGangaPage06() {
 }
 function goToBhajanGangaPage07() {
      window.location.href = 'bhajanganga7.html';
+}
+function goToBhajanGangaPage08() {
+     window.location.href = 'bhajanganga8.html';
 }
 
 // Chapter Next Previous link for Samudaayik Upasana 01072025
