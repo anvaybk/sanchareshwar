@@ -455,6 +455,30 @@ function goToGurugeetaPage6() {
      window.location.href = 'gurugeeta6.html';
 }
 
+
+// Chapter Next Previous link for changdevpasashti 28082025
+function goToChangdevPasashtiHome() {
+     window.location.href = '../changdevpasashti.html';
+}
+function goToChangdevPasashtiPage1() {
+     window.location.href = 'cpasashti1.html';
+}
+function goToChangdevPasashtiPage2() {
+     window.location.href = 'cpasashti2.html';
+}
+function goToChangdevPasashtiPage3() {
+     window.location.href = 'cpasashti3.html';
+}
+function goToChangdevPasashtiPage4() {
+     window.location.href = 'cpasashti4.html';
+}
+function goToChangdevPasashtiPage5() {
+     window.location.href = 'cpasashti5.html';
+}
+function goToChangdevPasashtiPage6() {
+     window.location.href = 'cpasashti6.html';
+}
+
 // JavaScript to disable right-click context menu globally and on a specific section
 document.addEventListener('DOMContentLoaded', function() {
     // Disable right-click context menu globally
