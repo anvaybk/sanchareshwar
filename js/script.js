@@ -479,6 +479,49 @@ function goToChangdevPasashtiPage6() {
      window.location.href = 'cpasashti6.html';
 }
 
+// Chapter Next Previous link for Shri Narada Bhaktisutre 05092025
+function goToNaradBhaktisutreHome() {
+     window.location.href = '../naradbhaktisutre.html';
+}
+function goToNaradBhaktisutrePage1() {
+     window.location.href = 'nbhaktisutre1.html';
+}
+function goToNaradBhaktisutrePage2() {
+     window.location.href = 'nbhaktisutre2.html';
+}
+function goToNaradBhaktisutrePage3() {
+     window.location.href = 'nbhaktisutre3.html';
+}
+function goToNaradBhaktisutrePage4() {
+     window.location.href = 'nbhaktisutre4.html';
+}
+function goToNaradBhaktisutrePage5() {
+     window.location.href = 'nbhaktisutre5.html';
+}
+function goToNaradBhaktisutrePage6() {
+     window.location.href = 'nbhaktisutre6.html';
+}
+function goToNaradBhaktisutrePage7() {
+     window.location.href = 'nbhaktisutre7.html';
+}
+function goToNaradBhaktisutrePage8() {
+     window.location.href = 'nbhaktisutre8.html';
+}
+function goToNaradBhaktisutrePage9() {
+     window.location.href = 'nbhaktisutre9.html';
+}
+function goToNaradBhaktisutrePage10() {
+     window.location.href = 'nbhaktisutre10.html';
+}
+function goToNaradBhaktisutrePage11() {
+     window.location.href = 'nbhaktisutre11.html';
+}
+function goToNaradBhaktisutrePage12() {
+     window.location.href = 'nbhaktisutre12.html';
+}
+
+
+
 // JavaScript to disable right-click context menu globally and on a specific section
 document.addEventListener('DOMContentLoaded', function() {
     // Disable right-click context menu globally
