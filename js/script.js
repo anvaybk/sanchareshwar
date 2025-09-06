@@ -520,6 +520,40 @@ function goToNaradBhaktisutrePage12() {
      window.location.href = 'nbhaktisutre12.html';
 }
 
+// Chapter Next Previous link for Shri Katha Raghvachi 06092025
+function goToKathaRaghavachiHome() {
+     window.location.href = '../katharaghavachi.html';
+}
+function goToKathaRaghavachiPage1() {
+     window.location.href = 'kraghavachi1.html';
+}
+function goToKathaRaghavachiPage2() {
+     window.location.href = 'kraghavachi2.html';
+}
+function goToKathaRaghavachiPage3() {
+     window.location.href = 'kraghavachi3.html';
+}
+function goToKathaRaghavachiPage4() {
+     window.location.href = 'kraghavachi4.html';
+}
+function goToKathaRaghavachiPage5() {
+     window.location.href = 'kraghavachi5.html';
+}
+function goToKathaRaghavachiPage6() {
+     window.location.href = 'kraghavachi6.html';
+}
+function goToKathaRaghavachiPage7() {
+     window.location.href = 'kraghavachi7.html';
+}
+function goToKathaRaghavachiPage8() {
+     window.location.href = 'kraghavachi8.html';
+}
+function goToKathaRaghavachiPage9() {
+     window.location.href = 'kraghavachi9.html';
+}
+function goToKathaRaghavachiPage10() {
+     window.location.href = 'kraghavachi10.html';
+}
 
 
 // JavaScript to disable right-click context menu globally and on a specific section
