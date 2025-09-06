@@ -1,6 +1,6 @@
 // Last updated on 05092025162426
 
-const CACHE_NAME = 'sanchareshwar-v1.0.0.6';
+const CACHE_NAME = 'sanchareshwar-v1.0.0.7';
 
 // Dynamically determine the base path (e.g., "/sanchareshwar")
 const BASE_PATH = self.location.pathname.replace(/\/serviceworker\.js$/, '');
@@ -30,6 +30,7 @@ const RESOURCE_PATHS = [
 		"/gurugeeta.html",
 		"/changdevpasashti.html",
 		"/naradbhaktisutre.html",
+		"/katharaghavachi.html",
 		"/pages/chapterprastavana.html",
 		"/pages/chapter0.html",
 		"/pages/chapter1.html",
@@ -175,6 +176,16 @@ const RESOURCE_PATHS = [
 		"/pages/nbhaktisutre10.html",
 		"/pages/nbhaktisutre11.html",
 		"/pages/nbhaktisutre12.html",
+		"/pages/kraghavachi1.html",
+		"/pages/kraghavachi2.html",
+		"/pages/kraghavachi3.html",
+		"/pages/kraghavachi4.html",
+		"/pages/kraghavachi5.html",
+		"/pages/kraghavachi6.html",
+		"/pages/kraghavachi7.html",
+		"/pages/kraghavachi8.html",
+		"/pages/kraghavachi9.html",
+		"/pages/kraghavachi10.html",
 		"/images/SM-Granth-Vachan-Icon-60x60.webp",
 		"/images/SM-Panchapadi-60x60.webp",
 		"/images/SM-Bavani-60x60.webp",
@@ -207,6 +218,7 @@ const RESOURCE_PATHS = [
         "/images/SM_Shree_Sanchareshwar_Maharaj.jpg", 
 		"/images/SM-ChangdevPasashti-80x80.webp",
 		"/images/Narad-Bhaktisutre-80x80.webp",
+		"/images/Katha-Raghavachi-80x80.webp",
 		"/images/photo-gallery/Photo-0.webp",	// Cache Photo Gallery images
 		"/images/photo-gallery/Photo-1.webp",
 		"/images/photo-gallery/Photo-2.webp",
